@@ -1,0 +1,311 @@
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+header {
+    display: flex;
+    justify-content: left;
+    padding: 30px 0%;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    width: 80%;
+    height: 100px;
+    background: black;
+    box-sizing: border-box;
+}
+h1 {
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    left: 0;
+    text-align: left;
+    padding-left: 0;
+    bottom: 0;
+}
+h1 img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+} 
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+    right: 0;
+    z-index: 101;
+}
+nav {
+    display: flex;
+    align-items: flex-end;
+    margin-left: auto;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+}
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 10%;
+    background: url('./img/background.jpeg') no-repeat center center/cover;
+    width: 80%;
+    height: 60vh;
+    margin: 100px auto 0;
+    box-sizing: border-box;
+}
+.main-subtext {
+    position: relative;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    z-index: 0;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+.form-container h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+.form-container textarea {
+    width: 80%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-height: 100px;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+}
+.form-container button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+}
+
+.main-subtext::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; 
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+    z-index: -1;
+    border-radius: 8px; 
+}
+h2 {
+    font-size: 3rem;
+    max-width: 800px;
+}
+p {
+    font-size: 1.5rem;
+}
+.btn, .btn-outline {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.btn {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+.btn-outline {
+    background: none;
+    border: 2px solid white;
+    color: white;
+}
+section {
+    margin-top: 0;
+    padding: 40px 10%;
+    background: black;
+    box-sizing: border-box;
+}
+section h3 {
+    font-size: 1.8rem;
+}
+.logo-section {
+    margin-top: 80px !important
+}
+.services-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 40px 10%;
+    box-sizing: border-box;
+}
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+}
+#contact .card{
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+}
+.card h4 {
+    font-size: 1.4rem;
+}
+.card p {
+    font-size: 0.9rem;
+}
+footer {
+    background: #1a1a1a;
+    color: #ddd;
+    padding: 40px 10%;
+    text-align: center;
+}
+footer p {
+    font-size: 14px;
+    width: 100%;
+}
+footer a {
+    text-decoration: underline;
+    color: #ddd;
+}
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #666;
+    margin-top: -80px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s;
+}
+.contact {
+    margin-top: 20px;
+}
+.contact a {
+    color:white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+    margin: 0 10px;
+}
+.contact-icons a {
+    font-size: 26px;
+    color: white;
+    transition: color 0.3s, transform 0.3s;
+}
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: black;
+        padding: 10px 0;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    nav.active {
+        display: flex;
+    }
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100px;
+    }
+    h1 {
+        left: 0;
+        font-size: 1.5rem;
+        margin: 0;
+        bottom: 0;
+        align-items: center
+    }
+    h1 img {
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+    } 
+    body.menu-open main,
+    body.menu-open #services {
+        margin-top: 250px;
+    }
+    section {
+        padding-top: 80px;
+    }
+    .card {
+        width: 100%;
+    }
+}

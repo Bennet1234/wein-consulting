@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bennet Wein - Brand management professional specializing in social media strategy, creative concepting, and leadership.">
+    <meta name="keywords" content="Bennet Wein, brand management, social media, marketing, leadership, business strategy">
+    <meta name="author" content="Bennet Wein">
+    <title>Wein Consulting</title>
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+    </style>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const navLinks = document.querySelectorAll("nav a");
+            navLinks.forEach(link => {
+                link.addEventListener("click", function() {
+                    const nav = document.querySelector("nav");
+                    if (nav.classList.contains("active")) {
+                        nav.classList.remove("active");
+                        document.body.classList.remove("menu-open");
+                    }
+                });
+            });
+        });
+
+        function openForm() {
+            document.getElementById("overlay").style.display = "flex";
+        }
+        function closeForm() {
+            document.getElementById("overlay").style.display = "none";
+        }
+        function sendEmail() {
+            const message = document.getElementById("user-message").value;
+            const mailtoLink = `mailto:bennet.wein@reelstudio.de?subject=Contact Request&body=Hi there!%0A%0AThanks or reaching out. Your original message will be attached in the end o this email.%0A%0A%0A------------------------------%0A%0A%0A${encodeURIComponent(message)}`;
+            window.location.href = mailtoLink;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>
+            <img src="./img/favicon.png" alt="Logo">
+            <div class="h1-text">Wein Consulting</div>
+        </h1>
+        <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Brand Management Consulting for <em>Your Business</em></h2>
+        <p class="main-subtext"><b>Leverage best-in-class brand management and social media consulting to achieve your business goals.</b></p>
+        <button class="btn" onclick="openForm()">Reach Out 🚀</button>
+        <div id="overlay" class="overlay">
+            <div class="form-container">
+                <span class="close-btn" onclick="closeForm()">&times;</span>
+                <h3>Contact Us</h3>
+                <form onsubmit="sendEmail(); return false;">
+                    <textarea id="user-message" placeholder="Enter your message..."></textarea>
+                    <button type="submit">Send Email</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <section class="logo-section" id="logo">
+        <img class="profile-img" src="./img/favicon.png" alt="Logo"> 
+    </section>
+    <section id="about">
+        <h3>About us</h3>
+        <div class="services-grid">
+            <p>Elevate your brand with strategic precision.</p>
+            <p>At Wein Consulting, we specialize in brand management consulting, helping businesses craft compelling identities, drive engagement, and achieve lasting market impact. From brand strategy to reputation management, we provide tailored solutions that set you apart. Let’s build a brand that thrives.</p>
+        </div>
+    </section>
+    <section id="services">
+        <h3>Services</h3>
+        <div class="services-grid">
+            <div class="card">
+                <h4>Consulting</h4>
+                <p>Ability to develop effective brand and social media strategies that drive engagement and growth.</p>
+            </div>
+            <div class="card">
+                <h4>Creative Concepting</h4>
+                <p>Skilled in crafting innovative ideas and compelling content to enhance brand presence.</p>
+            </div>
+            <div class="card">
+                <h4>Leadership Support</h4>
+                <p>Experienced in guiding teams and managing projects to achieve successful outcomes.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h3>Contact</h3>
+        <div class="services-grid">
+            <div class="card">
+                <h4>Contact</h4>
+                <img class="profile-img" src="./img/linked-in.jpeg" alt="Profile Picture">
+                <div class="contact">
+                    <div class="contact-icons">
+                        <a href="mailto:bennet.wein@reelstudio.de" class="fas fa-envelope"></a>
+                        <a href="https://www.linkedin.com/in/bennet-wein-b5218a244/" class="fab fa-linkedin"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Bennet Wein. All rights reserved.</p>
+        <p>Hosted on <a href="https://pages.github.com/">GitHub Pages</a></p>
+    </footer>
+</body>
+</html>
