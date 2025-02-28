@@ -7,12 +7,9 @@
     <meta name="keywords" content="Bennet Wein, brand management, social media, marketing, leadership, business strategy">
     <meta name="author" content="Bennet Wein">
     <title>Wein Consulting</title>
-    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <link rel="icon" type="image/png" href="./img/favicon.jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        
-    </style>
     <script>
         function toggleMenu() {
             const nav = document.querySelector('nav');
@@ -45,11 +42,12 @@
             window.location.href = mailtoLink;
         }
     </script>
+    <script src="https://embed.typeform.com/next/embed.js"></script>
 </head>
 <body>
     <header>
-        <h1>
-            <img src="./img/favicon.png" alt="Logo">
+        <h1 onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+            <img src="./img/favicon.jpeg" alt="Logo">
             <div class="h1-text">Wein Consulting</div>
         </h1>
         <span class="menu-toggle" onclick="toggleMenu()">☰</span>
@@ -77,12 +75,12 @@
         </div>
     </main>
     <section class="logo-section" id="logo">
-        <img class="profile-img" src="./img/favicon.png" alt="Logo"> 
+        <img class="profile-img" src="./img/favicon.jpeg" alt="Logo"> 
     </section>
     <section id="about">
         <h3>About us</h3>
         <div class="services-grid">
-            <p>Elevate your brand with strategic precision.</p>
+            <p><em>Elevate your brand with strategic precision.</em></p>
             <p>At Wein Consulting, we specialize in brand management consulting, helping businesses craft compelling identities, drive engagement, and achieve lasting market impact. From brand strategy to reputation management, we provide tailored solutions that set you apart. Let’s build a brand that thrives.</p>
         </div>
     </section>
@@ -112,11 +110,14 @@
                 <div class="contact">
                     <div class="contact-icons">
                         <a href="mailto:bennet.wein@reelstudio.de" class="fas fa-envelope"></a>
-                        <a href="https://www.linkedin.com/in/bennet-wein-b5218a244/" class="fab fa-linkedin"></a>
+                        <a href="https://www.linkedin.com/in/bennet-wein-b5218a244/" target="_blank" rel="noopener noreferrer" class="fab fa-linkedin"></a>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+    <section id="typeform">
+        <div data-tf-widget="01JN659N34GV1MPD3HB5ZZX9SR"></div>>
     </section>
     <footer>
         <p>&copy; 2025 Bennet Wein. All rights reserved.</p>
