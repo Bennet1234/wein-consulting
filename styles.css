@@ -277,7 +277,7 @@ footer a {
     transition: color 0.3s, transform 0.3s;
 }
 #typeform {
-    height: 400px;
+    height: 600px;
 }
 @media (max-width: 768px) {
     .menu-toggle {
